@@ -1,0 +1,83 @@
+
+<h2 class="sp-t">Seguimientos general de las zonas</h2>
+<div class="maxContent sp-b">
+    <table class="cont-z">
+        <thead>
+            <tr>
+                <th>Id Zonas</th>
+                <th>Nombre Minicipio</th>
+                <th>Id Minicipio</th>
+                <th>Nombre Departamento</th>
+                <th>Id Departamento</th>
+                <th>Cantidad Siembra</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let item of listData">
+                <tr (click)="getDataTable(item.id_zones, item)">
+                    <td><strong>{{item.id_zones}}</strong></td>
+                    <td>{{item.municipality_name}}</td>
+                    <td>{{item.id_municipality}}</td>
+                    <td>{{item.department_name}}</td>
+                    <td>{{item.id_department}}</td>
+                    <td><strong>{{item.countplant}}</strong></td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
+
+<h2>Seguimientos de las plagas por zonas</h2>
+<table class="cont-z">
+    <thead>
+        <tr>
+            <th class="color-tex">Id Zonas: {{zoneActive.id_zones}}</th>
+            <th class="color-tex">Id Zonas: {{zoneActive.id_department}}</th>
+            <th class="color-tex">Id Zonas: {{zoneActive.id_municipality}}</th>
+            <th class="color-tex">Cantidad Siembra: <strong>{{zoneActive.countplant}}</strong></th>
+            <th class="color-tex">Cantidad Infectados: <strong>{{zoneActive.countInfect}}</strong></th>
+        </tr>
+    </thead>
+</table>
+<div class="maxContent sp-b">
+    <table class="cont-z">
+        <thead>
+            <tr>
+                <th>Id Zonas</th>
+                <th>No. Infectados</th>
+                <th>% Infectados</th>
+                <th>Tipo Infeccion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let item of infoZone">
+                <tr>
+                    <td><strong>{{item.id_zones}}</strong></td>
+                    <td>{{item.infec}}</td>
+                    <td>{{(item.infec_percent * 100).toFixed(1)}}%</td>
+                    <td>{{item.type_pest}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
+
+<h2>Seguimientos de las plantas por zonas</h2>
+<div class="maxContent sp-b">
+    <table class="cont-z">
+        <thead>
+            <tr>
+                <th>Id Planta</th>
+                <th>Infeccion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let item of plantList">
+                <tr class="{{item.type === '0'?'clear':'infected'}}">
+                    <td><strong>{{item.id_plant}}</strong></td>
+                    <td>{{item.type === '0'?'Limpio':item.type}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

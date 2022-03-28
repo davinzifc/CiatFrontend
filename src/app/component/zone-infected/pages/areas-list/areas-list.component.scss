@@ -1,0 +1,103 @@
+.cont-z{
+    width: 100%;
+
+    tbody{
+        
+        tr{
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.041);
+    
+            }
+            &:focus{
+                background-color: rgba(0, 0, 0, 0.041);
+    
+            }
+            td{
+                cursor: pointer;
+                
+            }
+
+            
+
+        }
+    }
+}
+
+table{
+    border-spacing: 0;
+    box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+    background: white;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-color: grey;
+
+    thead{
+        background: inherit;
+        tr{
+            height: 56px;
+            th{
+                padding-left: 24px;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                text-align: left;
+                border-bottom-color: #0000001f;
+                color: #0000008a;
+            }
+        }
+    }
+
+    tbody{
+        background: inherit;
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+        tr{
+            height: 48px;
+            td{
+                padding-left: 24px;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: #0000001f;
+                font-size: 14px;
+                color: #000000de;
+            }
+        }
+    }
+}
+
+.sp-t{
+    margin-top: 50px;
+}
+
+.sp-b{
+    margin-bottom: 50px;
+}
+
+.sp{
+    margin: 50px 0;
+}
+
+.color-tex{
+    color: #000000de !important;
+}
+
+.clear{
+    background-color: #8bc34a2d;
+}
+
+.infected{
+    background-color: #ff52522d
+}
+
+.maxContent{
+    box-shadow: 0 5px 5px -3px #0003, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+
+    max-height: 400px;
+    overflow: auto;
+}
+
+h2{
+    color: #000000de !important;
+}
